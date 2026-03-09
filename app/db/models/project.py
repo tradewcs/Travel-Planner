@@ -4,7 +4,7 @@ from typing import List, Optional
 from sqlalchemy import String, Date, Enum as SQLEnum
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from app.models.base import BaseModel
+from app.db.models.base import BaseModel
 
 
 class ProjectStatus(str, Enum):
@@ -26,7 +26,10 @@ class Project(BaseModel):
     start_date: Mapped[Optional[date]] = mapped_column(Date)
 
     status: Mapped[ProjectStatus] = mapped_column(
-        SQLEnum(ProjectStatus), default=ProjectStatus.ACTIVE, nullable=False, index=True
+        SQLEnum(ProjectStatus), 
+        default=ProjectStatus.ACTIVE,
+        nullable=False, 
+        index=True
     )
 
     project_places: Mapped[List["ProjectPlace"]] = relationship(

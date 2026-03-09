@@ -2,7 +2,7 @@ from typing import List, Optional
 from sqlalchemy import String, JSON
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from app.models.base import BaseModel
+from app.db.models.base import BaseModel
 
 
 class Place(BaseModel):

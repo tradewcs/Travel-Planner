@@ -2,7 +2,7 @@ from uuid import UUID
 from sqlalchemy import select, and_
 from sqlalchemy.orm import selectinload
 
-from app.models import ProjectPlace
+from app.db.models import ProjectPlace
 from app.repositories.base import BaseRepository
 
 

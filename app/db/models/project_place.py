@@ -4,8 +4,8 @@ from sqlalchemy import Text, Boolean, ForeignKey, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from advanced_alchemy.types import DateTimeUTC
 
-from app.models.project import ProjectStatus
-from app.models.base import BaseModel
+from app.db.models.project import ProjectStatus
+from app.db.models.base import BaseModel
 
 
 class ProjectPlace(BaseModel):

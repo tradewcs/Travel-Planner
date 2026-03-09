@@ -2,7 +2,7 @@ from uuid import UUID
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
 
-from app.models import Project, ProjectPlace
+from app.db.models import Project, ProjectPlace, ProjectStatus
 from app.repositories.base import BaseRepository
 
 
@@ -25,12 +25,12 @@ class ProjectRepository(BaseRepository[Project]):
 
     async def get_active_projects(self) -> list[Project]:
         """Get all active projects."""
-        return await self.list(status="active")
+        return await self.list(status=ProjectStatus.ACTIVE)
 
     async def complete_project(self, project_id: UUID) -> Project | None:
         """Mark a project as completed."""
         project = await self.get(project_id)
         if project:
-            project.status = "completed"
+            project.status = ProjectStatus.COMPLETED  # Use enum
             project = await self.update(project)
         return project

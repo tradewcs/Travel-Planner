@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field, ConfigDict
 from datetime import date, datetime
 from uuid import UUID
 from typing import Optional, List
-from app.models.project import ProjectStatus
+from app.db.models.project import ProjectStatus
 
 
 class ProjectBase(BaseModel):

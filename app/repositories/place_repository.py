@@ -1,4 +1,4 @@
-from models import Place
+from app.db.models import Place
 from app.repositories.base import BaseRepository
 
 

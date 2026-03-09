@@ -5,7 +5,7 @@ from datetime import date
 from app.repositories.project_repository import ProjectRepository
 from app.repositories.project_place_repository import ProjectPlaceRepository
 from app.services.place_service import PlaceService
-from app.models import Project, ProjectPlace, ProjectStatus
+from app.db.models import Project, ProjectPlace, ProjectStatus
 from app.core.config import settings
 from app.core.exceptions import BusinessRuleViolation, ResourceNotFound
 

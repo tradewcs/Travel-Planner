@@ -4,7 +4,7 @@ from uuid import UUID
 from app.repositories.place_repository import PlaceRepository
 from app.repositories.project_place_repository import ProjectPlaceRepository
 from app.services.art_institute_service import ArtInstituteService
-from app.models import Place
+from app.db.models import Place
 
 
 class PlaceService:
