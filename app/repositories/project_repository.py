@@ -2,8 +2,8 @@ from uuid import UUID
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
 
-from models import Project, ProjectPlace
-from .base import BaseRepository
+from app.models import Project, ProjectPlace
+from app.repositories.base import BaseRepository
 
 
 class ProjectRepository(BaseRepository[Project]):
