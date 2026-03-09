@@ -57,7 +57,9 @@ Installation & Setup
 
 Running Tests
 
+```bash
 pytest -v
+```
 
 📚 API Documentation
 
