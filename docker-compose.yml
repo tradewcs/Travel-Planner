@@ -9,27 +9,27 @@ services:
     env_file:
       - .env
     environment:
-      - DATABASE_URL=postgresql+asyncpg://postgres:postgres@db:5432/travel_planner  # Override .env
+      - DATABASE_URL=postgresql+asyncpg://postgres:postgres@db:5432/travel_planner
     volumes:
       - .:/app:delegated
     depends_on:
       db:
         condition: service_healthy
-    networks:              # Add this
+    networks:
       - travel-planner-network
 
   db:
     image: postgres:15-alpine
     container_name: travel-planner-db
     ports:
-      - "5433:5432"  # Changed to 5433 to avoid conflict
+      - "5433:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: travel_planner
     volumes:
       - db_data:/var/lib/postgresql/data
-    networks:              # Add this
+    networks:
       - travel-planner-network
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
@@ -37,7 +37,7 @@ services:
       timeout: 5s
       retries: 5
 
-networks:                  # Add this
+networks:
   travel-planner-network:
     driver: bridge
 
