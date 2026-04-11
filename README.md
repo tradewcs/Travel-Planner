@@ -6,7 +6,7 @@
 
 **Plan smarter, not harder.** Travel-Planner is a robust management application that helps passionate travellers organize trips and curate a personal collection of must-visit places. Stop juggling spreadsheets and bookmarks—get a centralized hub for all your travel ideas.
 
-## ✨ Key Features
+## Key Features
 
 *   **🗺️ Trip Management**: Create detailed itineraries for your upcoming adventures. Set dates, destinations, and keep all trip-related info in one place.
 *   **📍 Place Collection**: Build a personal wishlist of places—restaurants, landmarks, hidden gems—and easily associate them with your planned trips.
